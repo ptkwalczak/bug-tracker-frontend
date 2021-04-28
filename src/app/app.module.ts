@@ -14,11 +14,7 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      dataEncapsulation: false,
-    }),
+    HttpClientModule
   ],
   declarations: [AppComponent, BugsComponent, BugDetailComponent],
   bootstrap: [AppComponent],

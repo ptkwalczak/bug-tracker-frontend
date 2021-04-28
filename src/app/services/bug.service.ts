@@ -6,8 +6,7 @@ import { Bug } from '../bugs/bug.interface';
 
 @Injectable({ providedIn: 'root' })
 export class BugService {
-  private bugsApiUrl = 'api/bugs';
-  // private bugsApiUrl = 'http://localhost:3000/bugs'; // uncomment when api is ready
+  private readonly bugsApiUrl = 'http://localhost:3000/bugs';
 
   httpOptions = {
     headers: new HttpHeaders({
