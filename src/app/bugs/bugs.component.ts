@@ -34,7 +34,7 @@ export class BugsComponent implements OnInit {
       });
   }
 
-  delete(bug: Bug): void {
+  public delete(bug: Bug): void {
     this.bugs = this.bugs.filter((b: Bug) => b !== bug);
     this.bugService.deleteBug(bug.id).subscribe();
   }
