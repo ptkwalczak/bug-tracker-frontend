@@ -29,8 +29,8 @@
         pending: bug.state === 'pending'
       }"
     >
-      <span class="badge">{{ bug.id }}</span> {{ bug.title }}
+      <span class="badge">{{ bug.id }}</span> <span class="title">{{ bug.title }}</span>
     </a>
-    <button class="delete" title="delete bug" (click)="delete(bug)">x</button>
+    <button class="delete" title="delete bug" (click)="delete(bug)">delete</button>
   </li>
 </ul>

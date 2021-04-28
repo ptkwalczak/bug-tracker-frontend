@@ -9,26 +9,29 @@
     border-radius: 4px;
     display: block;
     width: 100%;
-    .opened {
+    &.opened {
       background-color: grey;
     }
-    .closed {
+    &.closed {
       background-color: green;
     }
-    .pending {
+    &.pending {
       background-color: yellow;
     }
   }
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 100%;
 
   li {
     position: relative;
     cursor: pointer;
     &:hover {
       left: 0.1em;
+    }
+    .title {
+      margin-left: 70px;
     }
   }
 }
@@ -81,12 +84,13 @@ input {
 
 button.delete {
   position: absolute;
-  left: 210px;
-  top: 5px;
+  left: 100px;
+  top: -10px;
   background-color: white;
-  color: #525252;
+  color: red;
   font-size: 1.1rem;
   padding: 1px 10px 3px 10px;
+  margin-left: 3px;
 }
 
 button.delete:hover {
