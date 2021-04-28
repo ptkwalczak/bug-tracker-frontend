@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BugDetailComponent } from './bug-detail/bug-detail.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { InMemoryDataService } from './services/in-memory-data.service';
 
@@ -19,7 +20,7 @@ import { InMemoryDataService } from './services/in-memory-data.service';
       dataEncapsulation: false,
     }),
   ],
-  declarations: [AppComponent, BugsComponent],
+  declarations: [AppComponent, BugsComponent, BugDetailComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

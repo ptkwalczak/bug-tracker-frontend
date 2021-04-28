@@ -1,0 +1,40 @@
+<div *ngIf="bug">
+  <h2>{{ bug.title | uppercase }}</h2>
+  <div><span>id: </span>{{ bug.id }}</div>
+  <div>
+    <label for="bug-name">Title: </label>
+    <input id="bug-name" [(ngModel)]="bug.title" placeholder="Bug title" />
+    <div class="description-container">
+      <label for="bug-description">Description: </label>
+      <div>
+        <textarea
+          id="bug-description"
+          [(ngModel)]="bug.description"
+          placeholder="Bug description"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+  <button class="bug-opened" *ngIf="bug.state === 'opened'">OPENED</button>
+  <button class="bug-pending" *ngIf="bug.state === 'pending'">PENDING</button>
+  <button class="bug-closed" *ngIf="bug.state === 'closed'">CLOSED</button>
+
+  <div class="bug-actions">
+    <button
+      *ngIf="bug.state !== 'closed'"
+      (click)="closeBug()"
+      class="close-bug-button"
+    >
+      Close bug
+    </button>
+    <button
+      *ngIf="bug.state === 'opened'"
+      (click)="assignTo()"
+      class="assign-to-bug-button"
+    >
+      Assign to bug
+    </button>
+  </div>
+</div>

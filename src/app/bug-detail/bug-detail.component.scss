@@ -1,0 +1,53 @@
+label {
+  color: #435960;
+  font-weight: bold;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.5rem;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 0.5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: pink;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+button.bug-pending {
+  background-color: yellow;
+}
+
+button.bug-closed {
+  background-color: green;
+}
+
+#bugDescription {
+  padding: 10px;
+}
+
+.description-container {
+  margin-top: 20px;
+}
+
+.description-details {
+  margin-top: 30px;
+}
+
+textarea {
+  min-height: 100px;
+  min-width: 500px;
+}

@@ -8,7 +8,7 @@ import { Bug } from './bug.interface';
   styleUrls: ['./bugs.component.scss'],
 })
 export class BugsComponent implements OnInit {
-  bugs: Bug[] = [];
+  public bugs: Bug[] = [];
 
   constructor(private bugService: BugService) {}
 
