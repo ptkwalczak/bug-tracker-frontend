@@ -32,4 +32,9 @@ describe('Bugs Component', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should list 4 bugs', () => {
+    const numberOfItems = fixture.nativeElement.querySelectorAll('li').length;
+    expect(numberOfItems).toEqual(4);
+  });
 });
