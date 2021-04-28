@@ -13,6 +13,8 @@ This will be a frontend angular client for simple bug tracking
 - npm install
 - npm run start
 
+App will try to connect to the backend endpoint (http://localhost:3000/bugs). You must have it run in order to be able to communicate with backend side.
+
 # testing
 
 - npm run test
