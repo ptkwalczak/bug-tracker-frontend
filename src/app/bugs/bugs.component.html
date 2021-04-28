@@ -1,0 +1,36 @@
+<h2>My Bugs</h2>
+
+<div>
+  <label id="new-bug">Title: </label>
+  <input for="new-bug" #bugName />
+
+  <label id="new-bug">Description: </label>
+  <input for="new-bug" #bugDescription />
+
+  <button
+    class="add-button"
+    (click)="
+      add({ name: bugName.value, description: bugDescription.value });
+      bugName.value = '';
+      bugDescription.value = ''
+    "
+  >
+    Add new bug
+  </button>
+</div>
+
+<ul class="bugs">
+  <li *ngFor="let bug of bugs">
+    <a
+      routerLink="/detail/{{ bug.id }}"
+      [ngClass]="{
+        opened: bug.state === 'opened',
+        closed: bug.state === 'closed',
+        pending: bug.state === 'pending'
+      }"
+    >
+      <span class="badge">{{ bug.id }}</span> {{ bug.title }}
+    </a>
+    <button class="delete" title="delete bug" (click)="delete(bug)">x</button>
+  </li>
+</ul>
